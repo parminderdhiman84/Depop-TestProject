@@ -1,0 +1,20 @@
+{
+  "name": "depop-testproject",
+  "version": "0.0.1",
+  "private": true,
+  "description": "shopping portal",
+  "scripts": {
+    "test-ui": "node ./node_modules/cucumber/bin/cucumber-js ./src/ui/features/* -r ./src/ui/step_definitions/ --format json:./reports/cucumberOutputUI.json",
+    "report-ui": "node src/utility/generate-report.js --input ./reports/cucumberOutputUI.json --output ./reports/cucumber_report_ui.html"
+  },
+  "author": "Parminder Singh",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "command-line-args": "^5.0.2",
+    "config": "^2.0.1",
+    "cucumber": "^5.0.2",
+    "cucumber-html-reporter": "^4.0.2",
+    "selenium-webdriver": "3.6.0",
+    "dateformat": "3.0.3"
+  }
+}
